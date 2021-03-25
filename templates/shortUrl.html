@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Url Shortner</title>
+    <script>
+        function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the URl : " + copyText.value);
+}
+    </script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+        <div class="ui container" style=" margin-top: 50px;">
+            <div>
+                <h1 class="ui center aligned header">Url Shortner</h2>
+                <h5 class="ui center aligned header">Dynamic Coding</h4>
+            </div>
+
+        <div class ="ui segment">
+            <form class="ui form">
+                <input type="text" value={{url}} id="myInput">
+                <br><br>
+                <!-- The button used to copy the text -->
+                <button onclick="myFunction()" class="ui primary button">Copy text</button>
+                <button action="{{ url_for('index') }} " class="ui button">Back To Home</button> 
+    
+            </form>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

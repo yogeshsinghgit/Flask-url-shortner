@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Url Shortner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+    <div class="ui container" style=" margin-top: 50px;">
+        <div>
+            <h1 class="ui center aligned header">Url Shortner</h2>
+            <h5 class="ui center aligned header">Dynamic Coding</h4>
+        </div>
+
+        <div class ="ui segment">
+            <form action="{{ url_for('index') }}" method="POST" class="ui form">
+                <input type="text" name="url" placeholder="Paste Your Url...">
+                <br><br>
+                <input type="submit" value="Short Url &raquo;" class="ui primary button">
+                <input type="reset" value="Clear box" class="ui secondary button">
+            </form>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
